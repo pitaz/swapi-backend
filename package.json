@@ -1,0 +1,38 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "start": "rm -rf ./dist && npm run compile && node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/datasource-rest": "^6.0.0",
+    "@apollo/server": "^4.7.1",
+    "@apollo/subgraph": "^2.4.6",
+    "@as-integrations/aws-lambda": "^2.0.1",
+    "@graphql-tools/load-files": "^7.0.0",
+    "@graphql-tools/merge": "^8.4.2",
+    "@graphql-tools/schema": "^9.0.19",
+    "axios": "^1.4.0",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "serverless-plugin-typescript": "^2.1.4",
+    "typescript": "^5.0.4"
+  }
+}
