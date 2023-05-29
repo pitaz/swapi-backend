@@ -6,11 +6,11 @@ import { BASE_URL } from '../constants';
 class StarwarsAPI extends RESTDataSource {
   override baseURL = BASE_URL;
 
-  async getPerson(id: string): Promise<any> {
-    return this.get<any>(`people/${encodeURIComponent(id)}`);
+  async getPerson(id: string): Promise<TPerson> {
+    return this.get<TPerson>(`people/${encodeURIComponent(id)}`);
   }
 
-  async getPeople(limit = '10', page = '1', search?: string): Promise<any[]> {
+  async getPeople(limit = '10', page = '1', search?: string): Promise<TPerson[]> {
     let params: IParams = {
       limit,
       page,
@@ -19,7 +19,7 @@ class StarwarsAPI extends RESTDataSource {
     if(search) {
       params.search = search
     }
-    const data = await this.get<any>('people', {
+    const data = await this.get<TPerson[]>('people', {
       params: {
         per_page: limit,
         page,
